@@ -4,7 +4,7 @@ import { InfiniteScroll } from './InfiniteScroll';
 import { CardSkeleton } from '../common/Skeleton';
 
 export function FeedGrid() {
-  const { feed, isLoading, loadMore, onLearned, onDismissed } = useFeedContext();
+  const { feed, isLoading, loadMore, onLearned, onDismissed, selectArticle } = useFeedContext();
 
   if (isLoading && feed.length === 0) {
     return (
@@ -36,6 +36,7 @@ export function FeedGrid() {
           layout={layout}
           onLearned={onLearned}
           onDismissed={onDismissed}
+          onSelect={selectArticle}
         />
       ))}
       <div className="md:col-span-3">

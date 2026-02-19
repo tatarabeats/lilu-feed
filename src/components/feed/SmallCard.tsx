@@ -7,11 +7,15 @@ interface SmallCardProps {
   item: FeedItem;
   onLearned: (itemId: string) => void;
   onDismissed: (itemId: string, category: FeedCategory) => void;
+  onSelect: (item: FeedItem) => void;
 }
 
-export function SmallCard({ item, onLearned, onDismissed }: SmallCardProps) {
-  const content = (
-    <div className="feed-card bg-card-bg h-full flex flex-col">
+export function SmallCard({ item, onLearned, onDismissed, onSelect }: SmallCardProps) {
+  return (
+    <div
+      className="feed-card bg-card-bg h-full flex flex-col cursor-pointer"
+      onClick={() => onSelect(item)}
+    >
       {/* Image */}
       <div className="relative aspect-[3/2] overflow-hidden">
         <CardBadge badge={item.badge} archiveDate={item.archiveDate} />
@@ -47,21 +51,6 @@ export function SmallCard({ item, onLearned, onDismissed }: SmallCardProps) {
       </div>
     </div>
   );
-
-  if (item.sourceUrl) {
-    return (
-      <a
-        href={item.sourceUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block no-underline text-inherit"
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return content;
 }
 
 function getCategoryIcon(cat: string): string {

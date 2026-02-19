@@ -7,11 +7,15 @@ interface HeroCardProps {
   item: FeedItem;
   onLearned: (itemId: string) => void;
   onDismissed: (itemId: string, category: FeedCategory) => void;
+  onSelect: (item: FeedItem) => void;
 }
 
-export function HeroCard({ item, onLearned, onDismissed }: HeroCardProps) {
-  const content = (
-    <div className="feed-card bg-card-bg p-4 md:p-0 md:bg-transparent">
+export function HeroCard({ item, onLearned, onDismissed, onSelect }: HeroCardProps) {
+  return (
+    <div
+      className="feed-card bg-card-bg p-4 md:p-0 md:bg-transparent cursor-pointer"
+      onClick={() => onSelect(item)}
+    >
       {/* Mobile: stacked layout */}
       <div className="md:hidden">
         <div className="relative aspect-[2/1] overflow-hidden rounded-xl mb-3">
@@ -55,16 +59,6 @@ export function HeroCard({ item, onLearned, onDismissed }: HeroCardProps) {
       </div>
     </div>
   );
-
-  if (item.sourceUrl) {
-    return (
-      <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="block no-underline text-inherit">
-        {content}
-      </a>
-    );
-  }
-
-  return content;
 }
 
 function PlaceholderOrImage({ item }: { item: FeedItem }) {

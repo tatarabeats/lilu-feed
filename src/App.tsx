@@ -1,14 +1,16 @@
-import { FeedProvider } from './store/feedContext'
+import { FeedProvider, useFeedContext } from './store/feedContext'
 import { AppShell } from './components/layout/AppShell'
+import { ArticlePage } from './components/article/ArticlePage'
 import { WordPopup } from './components/common/WordPopup'
 import { useWordTranslation } from './hooks/useWordTranslation'
 
 function AppContent() {
   const { translation } = useWordTranslation()
+  const { selectedArticle } = useFeedContext()
 
   return (
     <>
-      <AppShell />
+      {selectedArticle ? <ArticlePage /> : <AppShell />}
       {translation && (
         <WordPopup
           word={translation.word}

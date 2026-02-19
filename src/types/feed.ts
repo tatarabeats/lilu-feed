@@ -23,6 +23,7 @@ export interface FeedItem {
   tickers: string[];
   contentType?: 'speech' | 'book' | 'podcast' | 'quote' | 'book_recommendation';
   fullText?: string | null;
+  articleBody?: string | null;
   author?: string;
 }
 
