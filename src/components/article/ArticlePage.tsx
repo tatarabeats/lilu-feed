@@ -123,11 +123,38 @@ export function ArticlePage() {
           </div>
         ) : (
           <div className="article-body text-[15px] text-text-primary leading-[1.8]">
-            {body?.split('\n').filter(Boolean).map((paragraph, i) => (
-              <p key={i} className="mb-4 last:mb-0">
-                {paragraph}
-              </p>
-            ))}
+            {body?.split('\n').filter(Boolean).map((line, i) => {
+              // Markdown heading
+              const h2Match = line.match(/^##\s+(.+)/);
+              if (h2Match) {
+                return (
+                  <h2 key={i} className="text-[17px] font-semibold text-text-primary mt-6 mb-2">
+                    {h2Match[1]}
+                  </h2>
+                );
+              }
+              const h1Match = line.match(/^#\s+(.+)/);
+              if (h1Match) {
+                return (
+                  <h2 key={i} className="text-[18px] font-semibold text-text-primary mt-6 mb-2">
+                    {h1Match[1]}
+                  </h2>
+                );
+              }
+              // Bold text: **text** → <strong>
+              const parts = line.split(/(\*\*[^*]+\*\*)/g);
+              return (
+                <p key={i} className="mb-4 last:mb-0">
+                  {parts.map((part, j) => {
+                    const boldMatch = part.match(/^\*\*(.+)\*\*$/);
+                    if (boldMatch) {
+                      return <strong key={j} className="font-semibold">{boldMatch[1]}</strong>;
+                    }
+                    return part;
+                  })}
+                </p>
+              );
+            })}
           </div>
         )}
 

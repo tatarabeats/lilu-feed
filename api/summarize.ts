@@ -65,7 +65,9 @@ export default async function handler(req: Request): Promise<Response> {
 - 投資家として知っておくべき重要な情報を抽出
 - 段落分けして読みやすくする（2〜3段落）
 - 事実ベースで客観的に
-- 記事の核心的なメッセージを最初に述べる`;
+- 記事の核心的なメッセージを最初に述べる
+- Markdownの見出し記法（# や ##）は使わず、プレーンテキストの段落で書く
+- **太字**は重要な固有名詞や数字に使ってもよい`;
 
     // 3. Call Claude API
     const claudeRes = await fetch('https://api.anthropic.com/v1/messages', {
