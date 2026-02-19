@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page-bg: #0f0f0e;
+  --color-card-bg: #1a1918;
+  --color-card-bg-hover: #222120;
+  --color-text-primary: #e8e6e3;
+  --color-text-secondary: #9a9a9a;
+  --color-text-muted: #5a5a5a;
+  --color-accent: #60a7ae;
+  --color-accent-dark: #4d8f96;
+  --color-border: #2a2928;
+  --color-badge-live: #ef4444;
+  --color-badge-archive: #52525b;
+  --color-gain: #22c55e;
+  --color-loss: #ef4444;
+  --color-placeholder-1: #1e3a5f;
+  --color-placeholder-2: #2d1b4e;
+  --color-placeholder-3: #1a3d2e;
+
+  --font-serif: 'Georgia', 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  --font-sans: -apple-system, 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-page-bg);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+/* Feed card interactions */
+.feed-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+@media (hover: hover) {
+  .feed-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .feed-card:hover .card-title {
+    color: var(--color-accent);
+  }
+  .feed-card:hover .card-image {
+    transform: scale(1.03);
+  }
+}
+
+.card-image {
+  transition: transform 0.4s ease;
+}
+
+.card-title {
+  transition: color 0.15s ease;
+}
+
+/* Placeholder gradients for cards without images */
+.placeholder-gradient-1 {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2440 100%);
+}
+.placeholder-gradient-2 {
+  background: linear-gradient(135deg, #2d1b4e 0%, #1a0f30 100%);
+}
+.placeholder-gradient-3 {
+  background: linear-gradient(135deg, #1a3d2e 0%, #0f2a1e 100%);
+}
+.placeholder-gradient-4 {
+  background: linear-gradient(135deg, #3d2d1a 0%, #2a1a0f 100%);
+}
+.placeholder-gradient-5 {
+  background: linear-gradient(135deg, #3d1a2d 0%, #2a0f1a 100%);
+}
+
+/* Word translation popup */
+.word-popup {
+  position: fixed;
+  z-index: 100;
+  padding: 8px 14px;
+  background: #1a1918;
+  border: 1px solid rgba(96, 167, 174, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  animation: popup-in 0.15s ease-out;
+}
+
+@keyframes popup-in {
+  from { opacity: 0; transform: translateY(4px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mobile-first scrollbar hide */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) {
+  .feed-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #242223 25%, #2e2c2d 50%, #242223 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 12px;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out both;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.3s ease-out forwards;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
