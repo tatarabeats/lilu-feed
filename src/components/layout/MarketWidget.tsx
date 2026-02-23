@@ -1,27 +1,32 @@
-import { useFeedContext } from '../../store/feedContext';
-import { PORTFOLIO, PORTFOLIO_TOTAL_VALUE, PORTFOLIO_FILING_DATE } from '../../data/portfolio';
+import { useFeedContext } from "../../store/feedContext";
+import {
+  PORTFOLIO,
+  PORTFOLIO_TOTAL_VALUE,
+  PORTFOLIO_FILING_DATE,
+} from "../../data/portfolio";
 
 export function MarketWidget() {
   const { marketData, marketLoading } = useFeedContext();
 
-  // Calculate weighted daily change
-  let dayChange: number | null = null;
+  // Calculate weighted total return from cost basis
+  let portfolioReturn: number | null = null;
   if (marketData) {
     let totalWeight = 0;
-    let weightedChange = 0;
+    let weightedReturn = 0;
     for (const h of PORTFOLIO) {
       const quote = marketData.holdings[h.symbol];
       if (quote) {
-        weightedChange += quote.changePercent * h.weight;
+        const ret = ((quote.price - h.avgCostBasis) / h.avgCostBasis) * 100;
+        weightedReturn += ret * h.weight;
         totalWeight += h.weight;
       }
     }
     if (totalWeight > 0) {
-      dayChange = weightedChange / totalWeight;
+      portfolioReturn = weightedReturn / totalWeight;
     }
   }
 
-  const isUp = dayChange !== null && dayChange >= 0;
+  const isUp = portfolioReturn !== null && portfolioReturn >= 0;
 
   return (
     <div className="bg-card-bg rounded-xl p-4 border border-border">
@@ -38,9 +43,12 @@ export function MarketWidget() {
 
       {marketLoading ? (
         <div className="text-xs text-text-muted">Loading market data...</div>
-      ) : dayChange !== null ? (
-        <div className={`text-sm font-medium ${isUp ? 'text-gain' : 'text-loss'}`}>
-          {isUp ? '+' : ''}{dayChange.toFixed(2)}% today
+      ) : portfolioReturn !== null ? (
+        <div
+          className={`text-sm font-medium ${isUp ? "text-gain" : "text-loss"}`}
+        >
+          {isUp ? "+" : ""}
+          {portfolioReturn.toFixed(0)}% from cost basis
         </div>
       ) : (
         <div className="text-xs text-text-muted">Market data unavailable</div>
@@ -49,19 +57,26 @@ export function MarketWidget() {
       <div className="mt-4 space-y-2">
         {PORTFOLIO.slice(0, 5).map((h) => {
           const quote = marketData?.holdings[h.symbol];
-          const changeColor = quote
-            ? quote.changePercent >= 0 ? 'text-gain' : 'text-loss'
-            : 'text-text-muted';
+          const returnPct = quote
+            ? ((quote.price - h.avgCostBasis) / h.avgCostBasis) * 100
+            : null;
+          const isGain = returnPct !== null && returnPct >= 0;
 
           return (
-            <div key={h.symbol} className="flex items-center justify-between text-xs">
+            <div
+              key={h.symbol}
+              className="flex items-center justify-between text-xs"
+            >
               <div className="flex items-center gap-2">
-                <span className="font-medium text-text-primary w-12">{h.symbol}</span>
+                <span className="font-medium text-text-primary w-12">
+                  {h.symbol}
+                </span>
                 <span className="text-text-muted">{h.weight}%</span>
               </div>
-              {quote ? (
-                <span className={changeColor}>
-                  {quote.changePercent >= 0 ? '+' : ''}{quote.changePercent.toFixed(2)}%
+              {returnPct !== null ? (
+                <span className={isGain ? "text-gain" : "text-loss"}>
+                  {isGain ? "+" : ""}
+                  {returnPct.toFixed(0)}%
                 </span>
               ) : (
                 <span className="text-text-muted">--</span>
