@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lilu-feed-v1';
+const CACHE_NAME = 'lilu-feed-v5';
 const STATIC_ASSETS = ['/', '/index.html'];
 
 self.addEventListener('install', (event) => {

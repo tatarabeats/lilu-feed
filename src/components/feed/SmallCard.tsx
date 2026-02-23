@@ -35,13 +35,13 @@ export function SmallCard({ item, onLearned, onDismissed, onSelect }: SmallCardP
       </div>
 
       {/* Content */}
-      <div className="p-3.5 flex flex-col flex-1">
-        <h3 className="card-title font-serif text-[15px] font-normal leading-[22px] tracking-[-0.3px] line-clamp-3 mb-auto">
+      <div className="p-4 flex flex-col flex-1">
+        <h3 className="card-title text-[17px] font-normal leading-[25px] tracking-[-0.3px] line-clamp-3 mb-auto">
           {item.title}
         </h3>
 
         <div className="mt-3 flex items-center justify-between gap-1">
-          <span className="text-[11px] text-text-muted truncate">{item.sourceName}</span>
+          <span className="text-[13px] text-text-muted truncate">{item.sourceName}</span>
           <CardActions
             item={item}
             onLearned={onLearned}

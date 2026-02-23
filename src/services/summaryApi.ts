@@ -1,7 +1,9 @@
-import type { FeedItem } from '../types/feed';
+import type { FeedItem } from "../types/feed";
 
-const CACHE_PREFIX = 'summary-';
+const CACHE_PREFIX = "summary-";
 const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+export const NO_CONTENT_MARKER = "__NO_CONTENT__";
 
 interface CachedSummary {
   text: string;
@@ -46,18 +48,26 @@ export async function fetchSummary(item: FeedItem): Promise<string> {
   // 3. If item has sourceUrl, call /api/summarize
   if (item.sourceUrl) {
     try {
-      const res = await fetch('/api/summarize', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/summarize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           url: item.sourceUrl,
           title: item.title,
           category: item.category,
+          description: item.rssDescription || undefined,
         }),
       });
 
       if (res.ok) {
-        const data = await res.json() as { summary: string | null };
+        const data = (await res.json()) as {
+          summary: string | null;
+          noContent?: boolean;
+        };
+        if (data.noContent) {
+          // Don't cache - maybe the article will be accessible later
+          return NO_CONTENT_MARKER;
+        }
         if (data.summary) {
           setCached(item.id, data.summary);
           return data.summary;

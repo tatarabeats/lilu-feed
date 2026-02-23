@@ -5,11 +5,14 @@ import { useUserPrefs } from '../hooks/useUserPrefs';
 import { useMarketData } from '../hooks/useMarketData';
 import { useFeed } from '../hooks/useFeed';
 import { filterByCategory } from '../services/feedBuilder';
+import { saveLearnedItem, loadNotes } from '../services/notesStore';
 
 interface FeedContextValue {
   feed: FeedCardLayout[];
   isLoading: boolean;
+  isRefreshing: boolean;
   loadMore: () => void;
+  refresh: () => void;
   onLearned: (itemId: string) => void;
   onDismissed: (itemId: string, category: FeedCategory) => void;
   marketData: MarketSnapshot | null;
@@ -19,16 +22,20 @@ interface FeedContextValue {
   selectedArticle: FeedItem | null;
   selectArticle: (item: FeedItem) => void;
   clearArticle: () => void;
+  notesCount: number;
+  refreshNotesCount: () => void;
 }
 
 const FeedContext = createContext<FeedContextValue | null>(null);
 
 export function FeedProvider({ children }: { children: ReactNode }) {
-  const { prefs, onLearned, onDismissed } = useUserPrefs();
+  const { prefs, onLearned: prefOnLearned, onDismissed } = useUserPrefs();
   const { marketData, isLoading: marketLoading } = useMarketData();
-  const { feed: rawFeed, isLoading, loadMore } = useFeed(prefs);
+  const { feed: rawFeed, isLoading, loadMore, allItems, refresh: feedRefresh } = useFeed(prefs);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<FeedItem | null>(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [notesCount, setNotesCount] = useState(() => loadNotes().length);
 
   const selectArticle = useCallback((item: FeedItem) => {
     setSelectedArticle(item);
@@ -49,6 +56,30 @@ export function FeedProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
+  const onLearned = useCallback((itemId: string) => {
+    const item = allItems.find((i) => i.id === itemId);
+    if (item) {
+      saveLearnedItem({
+        id: itemId,
+        title: item.title,
+        category: item.category,
+        sourceUrl: item.sourceUrl,
+        learnedAt: new Date().toISOString(),
+      });
+    }
+    prefOnLearned(itemId);
+  }, [allItems, prefOnLearned]);
+
+  const refresh = useCallback(() => {
+    setIsRefreshing(true);
+    feedRefresh();
+    setTimeout(() => setIsRefreshing(false), 2000);
+  }, [feedRefresh]);
+
+  const refreshNotesCount = useCallback(() => {
+    setNotesCount(loadNotes().length);
+  }, []);
+
   const feed = filterByCategory(rawFeed, selectedCategory);
 
   return (
@@ -56,7 +87,9 @@ export function FeedProvider({ children }: { children: ReactNode }) {
       value={{
         feed,
         isLoading,
+        isRefreshing,
         loadMore,
+        refresh,
         onLearned,
         onDismissed,
         marketData,
@@ -66,6 +99,8 @@ export function FeedProvider({ children }: { children: ReactNode }) {
         selectedArticle,
         selectArticle,
         clearArticle,
+        notesCount,
+        refreshNotesCount,
       }}
     >
       {children}

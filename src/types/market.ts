@@ -3,6 +3,8 @@ export interface PortfolioHolding {
   name: string;
   weight: number;
   shares: number;
+  avgCostBasis: number;
+  firstFilingYear: string;
 }
 
 export interface StockQuote {

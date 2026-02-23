@@ -24,13 +24,13 @@ export function MarketWidget() {
   const isUp = dayChange !== null && dayChange >= 0;
 
   return (
-    <div className="bg-card-bg rounded-xl p-4">
-      <h3 className="text-sm font-medium text-text-secondary mb-3">
+    <div className="bg-card-bg rounded-xl p-4 border border-border">
+      <h3 className="text-sm font-medium text-accent mb-3">
         Himalaya Capital Portfolio
       </h3>
 
       <div className="flex items-baseline gap-2 mb-1">
-        <span className="text-2xl font-serif text-text-primary">
+        <span className="text-2xl text-text-primary">
           ${(PORTFOLIO_TOTAL_VALUE / 1_000_000_000).toFixed(2)}B
         </span>
         <span className="text-xs text-text-muted">{PORTFOLIO_FILING_DATE}</span>

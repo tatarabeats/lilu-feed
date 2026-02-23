@@ -1,25 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-page-bg: #0f0f0e;
-  --color-card-bg: #1a1918;
-  --color-card-bg-hover: #222120;
-  --color-text-primary: #e8e6e3;
-  --color-text-secondary: #9a9a9a;
-  --color-text-muted: #5a5a5a;
-  --color-accent: #60a7ae;
-  --color-accent-dark: #4d8f96;
-  --color-border: #2a2928;
-  --color-badge-live: #ef4444;
-  --color-badge-archive: #52525b;
-  --color-gain: #22c55e;
-  --color-loss: #ef4444;
-  --color-placeholder-1: #1e3a5f;
-  --color-placeholder-2: #2d1b4e;
-  --color-placeholder-3: #1a3d2e;
+  /* === Deep Navy + Muted Gold (inspired by 資産管理アプリ) === */
+  --color-page-bg: oklch(0.14 0.025 260);
+  --color-card-bg: oklch(0.18 0.03 258);
+  --color-card-bg-hover: oklch(0.22 0.03 258);
+  --color-text-primary: oklch(0.63 0.14 40);
+  --color-text-secondary: oklch(0.50 0.08 42);
+  --color-text-muted: oklch(0.52 0.02 260);
+  --color-accent: oklch(0.72 0.09 75);
+  --color-accent-dark: oklch(0.65 0.08 75);
+  --color-border: oklch(0.26 0.035 258);
+  --color-badge-live: oklch(0.58 0.2 25);
+  --color-badge-archive: oklch(0.45 0.03 260);
+  --color-gain: oklch(0.68 0.1 155);
+  --color-loss: oklch(0.62 0.15 18);
+  --color-placeholder-1: oklch(0.2 0.04 250);
+  --color-placeholder-2: oklch(0.2 0.04 310);
+  --color-placeholder-3: oklch(0.2 0.04 160);
+  --color-input-bg: oklch(0.17 0.025 258);
 
-  --font-serif: 'Georgia', 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
-  --font-sans: -apple-system, 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
+  --font-sans:
+    -apple-system, "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Noto Sans JP", "BIZ UDPGothic", system-ui, sans-serif;
 }
 
 @layer base {
@@ -36,6 +39,10 @@
     min-height: 100vh;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "palt";
+    letter-spacing: 0.01em;
   }
 
   #root {
@@ -47,15 +54,21 @@
 .feed-card {
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  border: 1px solid oklch(0.26 0.035 258);
 }
 
 @media (hover: hover) {
   .feed-card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    border-color: oklch(0.72 0.09 75 / 0.4);
+    box-shadow:
+      0 0 0 1px oklch(0.72 0.09 75 / 0.15),
+      0 4px 24px oklch(0 0 0 / 0.3),
+      0 0 12px oklch(0.72 0.09 75 / 0.08);
   }
   .feed-card:hover .card-title {
     color: var(--color-accent);
@@ -73,21 +86,41 @@
   transition: color 0.15s ease;
 }
 
-/* Placeholder gradients for cards without images */
+/* Placeholder gradients for cards without images (dark jewel tones) */
 .placeholder-gradient-1 {
-  background: linear-gradient(135deg, #1e3a5f 0%, #0f2440 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.2 0.06 250) 0%,
+    oklch(0.16 0.04 260) 100%
+  );
 }
 .placeholder-gradient-2 {
-  background: linear-gradient(135deg, #2d1b4e 0%, #1a0f30 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.2 0.06 310) 0%,
+    oklch(0.16 0.04 320) 100%
+  );
 }
 .placeholder-gradient-3 {
-  background: linear-gradient(135deg, #1a3d2e 0%, #0f2a1e 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.2 0.06 160) 0%,
+    oklch(0.16 0.04 170) 100%
+  );
 }
 .placeholder-gradient-4 {
-  background: linear-gradient(135deg, #3d2d1a 0%, #2a1a0f 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.22 0.05 75) 0%,
+    oklch(0.17 0.04 80) 100%
+  );
 }
 .placeholder-gradient-5 {
-  background: linear-gradient(135deg, #3d1a2d 0%, #2a0f1a 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.2 0.06 20) 0%,
+    oklch(0.16 0.04 30) 100%
+  );
 }
 
 /* Word translation popup */
@@ -95,17 +128,23 @@
   position: fixed;
   z-index: 100;
   padding: 8px 14px;
-  background: #1a1918;
-  border: 1px solid rgba(96, 167, 174, 0.3);
+  background: oklch(0.2 0.03 258);
+  border: 1px solid oklch(0.3 0.04 258);
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px oklch(0 0 0 / 0.4);
   pointer-events: none;
   animation: popup-in 0.15s ease-out;
 }
 
 @keyframes popup-in {
-  from { opacity: 0; transform: translateY(4px) scale(0.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Mobile-first scrollbar hide */
@@ -127,27 +166,53 @@
 
 /* Animations */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-out {
-  from { opacity: 1; transform: scale(1); }
-  to { opacity: 0; transform: scale(0.95); }
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .skeleton {
-  background: linear-gradient(90deg, #242223 25%, #2e2c2d 50%, #242223 75%);
+  background: linear-gradient(
+    90deg,
+    oklch(0.18 0.03 258) 25%,
+    oklch(0.22 0.03 258) 50%,
+    oklch(0.18 0.03 258) 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 12px;
@@ -165,23 +230,38 @@
   animation: pulse-dot 1.5s ease-in-out infinite;
 }
 
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.78 0.08 70),
+    oklch(0.72 0.09 75),
+    oklch(0.66 0.07 80)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Article page */
 .article-page {
   animation: article-enter 0.25s ease-out;
 }
 
 @keyframes article-enter {
-  from { opacity: 0; transform: translateX(20px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.article-body {
-  font-family: var(--font-sans);
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .article-body p {
   margin-bottom: 1em;
-  line-height: 1.8;
+  line-height: 1.9;
   color: var(--color-text-primary);
 }
 
@@ -189,7 +269,7 @@
   margin-bottom: 0;
 }
 
-/* Scrollbar */
+/* Scrollbar (dark themed) */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -199,6 +279,71 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border);
+  background: oklch(0.3 0.03 258);
   border-radius: 999px;
+}
+
+/* Learned flash animation */
+@keyframes learned-flash {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+.animate-learned-flash {
+  animation: learned-flash 0.35s ease-out forwards;
+}
+
+/* Refresh spin */
+@keyframes spin-refresh {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-refresh {
+  animation: spin-refresh 0.8s linear infinite;
+}
+
+/* Swipe category transition */
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-from-right {
+  animation: slide-from-right 0.22s ease-out both;
+}
+
+.animate-slide-from-left {
+  animation: slide-from-left 0.22s ease-out both;
 }

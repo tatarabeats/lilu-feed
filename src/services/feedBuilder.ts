@@ -1,5 +1,5 @@
-import type { FeedItem, FeedCardLayout } from '../types/feed';
-import type { UserPreferences } from '../types/user';
+import type { FeedItem, FeedCardLayout } from "../types/feed";
+import type { UserPreferences } from "../types/user";
 
 export function buildFeed(
   allItems: FeedItem[],
@@ -23,29 +23,38 @@ export function buildFeed(
     .sort((a, b) => b.score - a.score);
 
   // Paginate
-  const start = 0;
   const end = (page + 1) * pageSize;
-  const pageItems = scored.slice(start, end);
+  const pageItems = scored.slice(0, end);
 
   // Assign card sizes: pattern is Hero, Small, Small, Small, Hero, Small, Small, Small...
   return pageItems.map(({ item }, index) => ({
     item,
-    size: index % 4 === 0 ? 'hero' as const : 'small' as const,
+    size: index % 4 === 0 ? ("hero" as const) : ("small" as const),
     index,
   }));
+}
+
+// Stable seeded pseudo-random based on item ID (FNV-1a hash)
+function seededRandom(seed: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return (h >>> 0) / 0xffffffff;
 }
 
 function computeScore(item: FeedItem, prefs: UserPreferences): number {
   let score = 0;
 
   // Recency: LIVE items get big boost
-  if (item.badge === 'LIVE') {
+  if (item.badge === "LIVE") {
     const ageMs = Date.now() - new Date(item.publishedAt).getTime();
     const ageHours = ageMs / (1000 * 60 * 60);
     score += Math.max(0, 200 - ageHours); // Newer = higher score
   } else {
-    // Archive items get mild randomization so feed doesn't feel stale
-    score += Math.random() * 30;
+    // Archive items: stable randomization so feed order doesn't change on reload
+    score += seededRandom(item.id) * 30;
   }
 
   // Category weight multiplier
@@ -64,7 +73,7 @@ export function filterByCategory(
   // Re-assign card sizes after filtering
   return filtered.map((layout, index) => ({
     ...layout,
-    size: index % 4 === 0 ? 'hero' as const : 'small' as const,
+    size: index % 4 === 0 ? ("hero" as const) : ("small" as const),
     index,
   }));
 }

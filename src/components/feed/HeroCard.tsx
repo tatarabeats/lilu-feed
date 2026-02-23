@@ -22,15 +22,15 @@ export function HeroCard({ item, onLearned, onDismissed, onSelect }: HeroCardPro
           <CardBadge badge={item.badge} archiveDate={item.archiveDate} />
           <PlaceholderOrImage item={item} />
         </div>
-        <h2 className="card-title font-serif text-lg font-normal leading-snug tracking-[-0.3px] mb-1.5">
+        <h2 className="card-title text-[22px] font-normal leading-snug tracking-[-0.3px] mb-2">
           {item.title}
         </h2>
-        <p className="text-[11px] text-text-muted mb-2">{formatDate(item.publishedAt)}</p>
-        <p className="text-[13px] text-text-secondary leading-[20px] line-clamp-2 mb-3">
+        <p className="text-[13px] text-text-muted mb-2">{formatDate(item.publishedAt)}</p>
+        <p className="text-[16px] text-text-secondary leading-[24px] line-clamp-2 mb-3">
           {item.summary}
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-[11px] text-text-muted">{item.sourceName}</span>
+          <span className="text-[13px] text-text-muted">{item.sourceName}</span>
           <CardActions item={item} onLearned={onLearned} onDismissed={onDismissed} />
         </div>
       </div>
@@ -39,16 +39,16 @@ export function HeroCard({ item, onLearned, onDismissed, onSelect }: HeroCardPro
       <div className="hidden md:flex gap-6">
         <div className="flex-1 flex flex-col justify-between py-1">
           <div>
-            <h2 className="card-title font-serif text-[26px] font-normal leading-[34px] tracking-[-0.5px] mb-2">
+            <h2 className="card-title text-[28px] font-normal leading-[36px] tracking-[-0.5px] mb-2">
               {item.title}
             </h2>
-            <p className="text-[12px] text-text-muted mb-3">{formatDate(item.publishedAt)}</p>
-            <p className="text-[14px] text-text-secondary leading-[22px] line-clamp-3">
+            <p className="text-[14px] text-text-muted mb-3">{formatDate(item.publishedAt)}</p>
+            <p className="text-[16px] text-text-secondary leading-[24px] line-clamp-3">
               {item.summary}
             </p>
           </div>
           <div className="mt-4 flex items-center justify-between">
-            <span className="text-[11px] text-text-muted">{item.sourceName}</span>
+            <span className="text-[13px] text-text-muted">{item.sourceName}</span>
             <CardActions item={item} onLearned={onLearned} onDismissed={onDismissed} />
           </div>
         </div>
@@ -84,9 +84,9 @@ function formatDate(iso: string): string {
   const diffMs = now.getTime() - date.getTime();
   const diffHours = diffMs / (1000 * 60 * 60);
 
-  if (diffHours < 1) return `${Math.floor(diffMs / (1000 * 60))}m ago`;
-  if (diffHours < 24) return `${Math.floor(diffHours)}h ago`;
-  if (diffHours < 48) return 'Yesterday';
+  if (diffHours < 1) return `${Math.floor(diffMs / (1000 * 60))}分前`;
+  if (diffHours < 24) return `${Math.floor(diffHours)}時間前`;
+  if (diffHours < 48) return '昨日';
 
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  return date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'short', day: 'numeric' });
 }

@@ -1,12 +1,11 @@
-import type { UserPreferences } from '../types/user';
-import type { FeedCategory } from '../types/feed';
+import type { UserPreferences } from "../types/user";
+import type { FeedCategory } from "../types/feed";
 
-const STORAGE_KEY = 'lilu_feed_prefs';
+const STORAGE_KEY = "lilu_feed_prefs";
 const CURRENT_VERSION = 2;
 
 const DEFAULT_WEIGHTS: Record<FeedCategory, number> = {
   portfolio_moves: 1.0,
-  holdings_performance: 1.0,
   lilu_news: 1.0,
   philosophy: 1.0,
   company_deep_dive: 1.0,
@@ -48,7 +47,10 @@ export function savePrefs(prefs: UserPreferences): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
 }
 
-export function markLearned(prefs: UserPreferences, itemId: string): UserPreferences {
+export function markLearned(
+  prefs: UserPreferences,
+  itemId: string,
+): UserPreferences {
   if (prefs.learnedItemIds.includes(itemId)) return prefs;
   return {
     ...prefs,

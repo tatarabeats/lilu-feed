@@ -7,14 +7,14 @@ const raw: ArchiveItem[] = [
   {
     category: 'philosophy',
     contentType: 'speech',
-    title: 'Global Value Investing in Our Era',
-    summary: 'Li Lu presents his framework for understanding value investing in a world shaped by technological disruption and geopolitical shifts. Delivered at a major investment conference in December 2024.',
+    title: '現代におけるバリュー投資',
+    summary: 'テクノロジーの破壊的変化と地政学的シフトの時代に、Li Luが投資機会の見極め方を語った2024年12月のカンファレンス講演。',
     articleBody: `Li Luは2024年12月の投資カンファレンスで、現代におけるバリュー投資の枠組みを提示した。テクノロジーの破壊的変化と地政学的シフトが進む世界で、どのように価値を見極めるかがテーマだ。
 
 彼の主張の核心は、バリュー投資の原則は時代を超えて有効だが、適用する対象は変化するということ。AI、クラウドコンピューティング、電気自動車などのテクノロジー企業も、適切な価格で買えばバリュー投資の対象になり得る。重要なのは「何を買うか」ではなく「いくらで買うか」だ。
 
 Li Luはまた、地政学的リスクを投資機会として捉える視点を強調。米中関係の緊張は特定の企業にとってディスカウントを生み出し、それが安全余裕（margin of safety）になるという逆説的な見方を提示した。彼自身のポートフォリオがPDD Holdings（中国EC企業）を14%保有していることが、この哲学の具体例だ。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1722121794554-770d57e81a87?w=600&h=400&fit=crop',
     sourceUrl: 'https://www.himcap.com/publications',
     sourceName: 'Himalaya Capital',
     sourceFaviconUrl: null,
@@ -25,8 +25,8 @@ Li Luはまた、地政学的リスクを投資機会として捉える視点を
   {
     category: 'philosophy',
     contentType: 'speech',
-    title: 'The Practice of Value Investing',
-    summary: 'A comprehensive talk on how value investing principles apply to modern markets. Li Lu discusses margin of safety, owner mentality, and the importance of staying within your circle of competence.',
+    title: 'バリュー投資の実践',
+    summary: '安全余裕、オーナーの精神、能力の輪——Li Luが投資哲学の4本柱を体系的に解説した講演。',
     articleBody: `Li Luの2019年の講演「バリュー投資の実践」は、彼の投資哲学の4本柱を体系的に解説した重要なスピーチだ。
 
 第1の柱「安全余裕（Margin of Safety）」: 本質的価値より大幅に安い価格で買うこと。分析の誤りや予期せぬ事態から身を守る保険となる。Li Luは「間違えても元本を失わない価格で買え」と強調する。
@@ -36,7 +36,7 @@ Li Luはまた、地政学的リスクを投資機会として捉える視点を
 第3の柱「ミスター・マーケット」: 市場はあなたの召使いであって導き手ではない。市場の変動を利用して、恐怖の時に買い、価格が高い時は待つ。感情に振り回されないこと。
 
 第4の柱「能力の輪（Circle of Competence）」: 自分が本当に理解できるビジネスだけに投資する。輪の大きさより、その境界を知ることが重要。能力の輪の外で投資すると永久的な資本損失が起きる。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1640030896178-5139164d74e6?w=600&h=400&fit=crop',
     sourceUrl: 'https://www.himcap.com/publications',
     sourceName: 'Himalaya Capital',
     sourceFaviconUrl: null,
@@ -47,8 +47,8 @@ Li Luはまた、地政学的リスクを投資機会として捉える視点を
   {
     category: 'philosophy',
     contentType: 'speech',
-    title: 'Civilizations, Modernization, and Value Investing',
-    summary: 'Li Lu explains his unique civilizational framework: modernization is a compounding phenomenon, and understanding this trajectory is key to identifying long-term investment opportunities.',
+    title: '文明・近代化・バリュー投資',
+    summary: 'Li Lu独自の文明論——近代化は複利的現象であり、その軌道を理解することが長期投資の鍵になる。',
     articleBody: `Li Luの最もユニークな知的貢献は、文明論と投資を結びつけた枠組みだ。この2020年の講演で、彼は近代化（モダナイゼーション）そのものが複利的な現象であると論じる。
 
 核心的な洞察: 一度近代化の軌道に乗った文明は、知識・技術・生活水準の複合的成長がほぼ止められなくなる。これは過去250年の人類史が証明している。産業革命以前の数千年間、1人あたりGDPはほぼ横ばいだったが、近代化の波が始まると指数関数的に上昇した。
@@ -56,7 +56,7 @@ Li Luはまた、地政学的リスクを投資機会として捉える視点を
 投資への応用: Li Luはこの枠組みを使って、どの国・どの産業が近代化の恩恵を最も受けるかを分析する。中国はまだ近代化の途上にあり、14億人の消費者が中産階級に移行する過程で巨大な投資機会が生まれるという。彼がPDD Holdings（Temu）やBank of Americaに集中投資する根拠もここにある。
 
 重要なのは、この見方が短期的な市場ノイズを無視する根拠にもなること。地政学的摩擦や一時的な景気後退は、文明レベルの長期トレンドの前では些末な出来事に過ぎない。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1574504500271-9b3cae982028?w=600&h=400&fit=crop',
     sourceUrl: 'https://www.himcap.com/publications',
     sourceName: 'Himalaya Capital',
     sourceFaviconUrl: null,
@@ -69,8 +69,8 @@ Li Luはまた、地政学的リスクを投資機会として捉える視点を
   {
     category: 'philosophy',
     contentType: 'book',
-    title: 'Moving the Mountain — Li Lu\'s Tiananmen Memoir',
-    summary: 'Li Lu\'s 1990 memoir recounting his experience as a student leader during the Tiananmen Square protests. A firsthand account of courage, survival, and the pursuit of freedom.',
+    title: '山を動かす——天安門事件の回顧録',
+    summary: '天安門広場で学生リーダーとして活動し、命がけでアメリカに亡命したLi Luの1990年の手記。',
     articleBody: `『Moving the Mountain（山を動かす）』は、Li Luが1990年に出版した天安門事件の回顧録だ。1966年中国生まれ、唐山大地震のサバイバーである彼が、天安門広場で学生リーダーとなり、最終的にアメリカに亡命するまでの壮絶な体験を描いている。
 
 Li Luは1989年の民主化運動で学生指導者の一人として活動。軍の武力鎮圧の中で命からがら脱出し、フランスを経てアメリカに渡った。無一文の難民として到着した彼は、コロンビア大学に入学する。
@@ -78,7 +78,7 @@ Li Luは1989年の民主化運動で学生指導者の一人として活動。�
 この本が投資家としてのLi Luを理解する上で重要な理由: 彼のリスク管理能力、逆境での冷静な判断力、そして「最悪の事態でも生き残る」という安全余裕の考え方は、天安門での経験に根ざしている。文字通り命がかかった状況でのサバイバル経験が、投資における「永久的な資本損失を避ける」という鉄則に結びついている。
 
 また、権威に対して独立した思考を持つ姿勢——群衆に流されず、自分の分析を信じる——もこの時期に形成された。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1583405584623-58f4b7d1380f?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Book',
     sourceFaviconUrl: null,
@@ -102,7 +102,7 @@ Li Luは1989年の民主化運動で学生指導者の一人として活動。�
 第4部「中国」: 中国が近代化の軌道に完全に乗ったと論じ、14億人の消費者市場が生み出す投資機会を分析。地政学的リスクを認めつつも、長期的には近代化の力がそれを凌駕すると主張する。
 
 Li Luの投資哲学を深く理解したい人にとって必読の一冊。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1580153330185-bc5b00410c84?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Book',
     sourceFaviconUrl: null,
@@ -115,8 +115,8 @@ Li Luの投資哲学を深く理解したい人にとって必読の一冊。`,
   {
     category: 'philosophy',
     contentType: 'podcast',
-    title: 'Founders Podcast #362 — Li Lu: Moving the Mountain',
-    summary: 'David Senra examines Li Lu\'s extraordinary journey from surviving the Tangshan earthquake to leading protests at Tiananmen Square to becoming one of the greatest investors of our time.',
+    title: 'Founders Podcast #362——Li Luの壮絶な人生',
+    summary: '唐山大地震の生還、天安門事件、そして世界トップクラスの投資家へ。David SenraがLi Luの驚異的な人生を辿る。',
     articleBody: `David Senraの「Founders Podcast」第362回は、Li Luの人生を詳細に追ったエピソードだ。Senraは数百冊の起業家・投資家の伝記を読んできたが、Li Luの人生は「最も驚異的」と評する。
 
 エピソードの主要な学び:
@@ -128,7 +128,7 @@ Li Luの投資哲学を深く理解したい人にとって必読の一冊。`,
 3. 「知的好奇心の力」: 難民としてアメリカに渡り、コロンビア大学でBA・JD・MBAの3学位を同時取得。この知的貪欲さが、あらゆるビジネスを深く理解する能力の源泉。
 
 4. 「メンターの重要性」: Charlie Mungerとの出会いがLi Luの投資人生を決定的に変えた。Senraは「適切な人に出会うタイミングが人生を変える」と強調する。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1668606143651-15faee151b8e?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Founders Podcast',
     sourceFaviconUrl: null,
@@ -139,8 +139,8 @@ Li Luの投資哲学を深く理解したい人にとって必読の一冊。`,
   {
     category: 'philosophy',
     contentType: 'podcast',
-    title: 'Founders Podcast #363 — Li Lu: Value Investing',
-    summary: 'Part 2 of the Li Lu deep dive. Senra explores Li Lu\'s investment philosophy, his relationship with Charlie Munger, and how he introduced BYD to Berkshire Hathaway.',
+    title: 'Founders Podcast #363——Li Luの投資哲学',
+    summary: 'Part 2。Mungerとの関係、BYDをバークシャーに紹介したエピソード、9銘柄集中投資の哲学を深掘り。',
     articleBody: `Founders Podcast第363回は、Li Luの投資哲学とCharlie Mungerとの関係に焦点を当てたPart 2だ。
 
 Li LuとMungerの関係: 1990年代後半、Li LuはMungerに出会い、バリュー投資に目覚める。Mungerは自分の個人資産$88Mの運用をLi Luに託した——Mungerが生涯で唯一使った外部ファンドマネージャーだ。この信頼は、Li Luの能力の証明であり、彼の投資アプローチへの最高の推薦状でもある。
@@ -148,7 +148,7 @@ Li LuとMungerの関係: 1990年代後半、Li LuはMungerに出会い、バリ�
 BYD紹介のエピソード: 2008年、Li LuはMungerに中国のBYD（バッテリー・電気自動車メーカー）を紹介した。Mungerは即座にバフェットに投資を勧め、バークシャーは$232Mを投資。この投資は後に$7B以上に成長し、バークシャー史上最高の投資の一つとなった。
 
 Senraが強調するポイント: Li Luの投資プロセスは驚くほどシンプルだ。(1) 本当に理解できるビジネスだけを探す、(2) 本質的価値を計算する、(3) 大幅なディスカウントで買う、(4) 長期保有する。たった9銘柄に$3.57Bを集中投資している事実が、このアプローチの純度を物語っている。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1605732926042-018a4d751890?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Founders Podcast',
     sourceFaviconUrl: null,
@@ -159,8 +159,8 @@ Senraが強調するポイント: Li Luの投資プロセスは驚くほどシ�
   {
     category: 'philosophy',
     contentType: 'podcast',
-    title: 'The Investor\'s Podcast — Li Lu & Himalaya Capital',
-    summary: 'A deep analysis of Li Lu\'s concentrated portfolio approach and how Himalaya Capital has generated exceptional returns with just 9 holdings.',
+    title: 'The Investor\'s Podcast——Li Luの集中投資',
+    summary: 'たった9銘柄で$3.57Bを運用するヒマラヤ・キャピタルの驚異的リターンの源泉を分析。',
     articleBody: `The Investor's Podcastによるヒマラヤ・キャピタルの分析エピソード。たった9銘柄で$3.57Bを運用するLi Luの集中投資アプローチを深掘りする。
 
 集中投資の哲学: Li Luのポートフォリオは、大手ファンドマネージャーの中でも異例の集中度だ。上位3銘柄（GOOG 43.86%、BAC 16.08%、PDD 14.64%）だけで全体の74%を占める。これは「少数の企業を深く理解する」方が「多数の企業を浅く知る」よりも良いリターンを生むという確信に基づく。
@@ -168,7 +168,7 @@ Senraが強調するポイント: Li Luの投資プロセスは驚くほどシ�
 リターンの源泉: ヒマラヤ・キャピタルの長期リターンは市場平均を大幅に上回っている。その理由は3つ: (1) 集中投資による高い確信度、(2) 長期保有による複利効果の最大化、(3) 市場のパニック時に積極的に買い増す逆張りの勇気。
 
 ポッドキャストの結論: Li Luのアプローチは誰にでも模倣できるものではない。なぜなら、それには「本当に深くビジネスを理解する」という膨大な知的作業と、「市場が暴落しても動じない」という精神的強さが必要だからだ。しかし、その原則——能力の輪を守り、安全余裕を確保し、長期で考える——は全ての投資家に適用できる。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1579226905180-636b76d96082?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'The Investor\'s Podcast',
     sourceFaviconUrl: null,
@@ -181,8 +181,8 @@ Senraが強調するポイント: Li Luの投資プロセスは驚くほどシ�
   {
     category: 'philosophy',
     contentType: 'quote',
-    title: 'Margin of Safety — The First Pillar',
-    summary: 'The concept of margin of safety is the bedrock of value investing. Buy assets at a significant discount to intrinsic value to protect against errors in analysis and unforeseen events.',
+    title: '安全余裕——第1の柱',
+    summary: '本質的価値より大幅に安く買う。分析の誤りや不測の事態から身を守るバリュー投資の土台。',
     articleBody: `「安全余裕（Margin of Safety）」はLi Luの投資哲学の第1の柱であり、バリュー投資の最も基本的な概念だ。
 
 本質的価値（intrinsic value）を計算し、それよりも大幅に安い価格でのみ買う。この「差額」が安全余裕だ。なぜこれが重要かというと、(1) 分析は常に不完全であり間違いがありえる、(2) 予期せぬ悪いイベントは必ず起きる、(3) その両方が同時に起きても元本を守れる価格で買うべきだからだ。
@@ -190,7 +190,7 @@ Senraが強調するポイント: Li Luの投資プロセスは驚くほどシ�
 Li Luの実践: 彼はポートフォリオの各銘柄に対して、本質的価値の50%以下で買うことを目指すと言われている。これは「間違えても大丈夫」な投資を意味する。
 
 天安門事件のサバイバーであるLi Luにとって、「最悪の事態に備える」は単なる投資理論ではない。命がかかった状況で学んだ実践的知恵だ。投資における永久的な資本損失（permanent capital loss）を避けることは、彼にとって生存本能に近い。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1708550614448-c3ebe4187754?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu',
     sourceFaviconUrl: null,
@@ -202,8 +202,8 @@ Li Luの実践: 彼はポートフォリオの各銘柄に対して、本質的�
   {
     category: 'philosophy',
     contentType: 'quote',
-    title: 'Owner\'s Mentality — Think Like a Business Owner',
-    summary: 'When you buy a stock, think of yourself as a part-owner of the business. This mindset fundamentally changes how you evaluate companies and how long you hold them.',
+    title: 'オーナーの精神——経営者のように考える',
+    summary: '株を買うときは、そのビジネスの共同オーナーだと考える。この視点が企業評価と保有期間を根本的に変える。',
     articleBody: `「オーナーの精神（Owner's Mentality）」は、株式投資に対する根本的な姿勢の転換を求めるLi Luの教えだ。
 
 株を「紙切れ」や「チャートの線」として見るのではなく、実際のビジネスの一部を所有していると考える。あなたがGOOG株を持っているなら、あなたはGoogleの共同オーナーだ。
@@ -214,7 +214,7 @@ Li Luの実践: 彼はポートフォリオの各銘柄に対して、本質的�
 - 情報の優先度が変わる: 日々の株価ではなく、四半期の業績、競合の動向、産業の構造変化に注目する
 
 Li Luは「経営者以上にそのビジネスを理解すべき」と言う。これが彼がたった9銘柄に集中する理由でもある——深く理解できる企業の数には限りがあるからだ。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1611956565880-10e29a417648?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu',
     sourceFaviconUrl: null,
@@ -226,8 +226,8 @@ Li Luは「経営者以上にそのビジネスを理解すべき」と言う。
   {
     category: 'philosophy',
     contentType: 'quote',
-    title: 'Mr. Market — Your Servant, Not Your Guide',
-    summary: 'The market is there to serve you, not to instruct you. Use market fluctuations to your advantage by buying when others are fearful and being patient when prices are high.',
+    title: 'ミスター・マーケット——召使いであって案内人ではない',
+    summary: '市場はあなたに仕えるもの。恐怖の時に買い、高値の時は待つ。感情に流されない投資の原則。',
     articleBody: `「ミスター・マーケット」はBenjamin Grahamが考案した有名な比喩だが、Li Luはこれを投資の核心的原則として日常的に実践している。
 
 ミスター・マーケットは毎日あなたのドアをノックし、あなたの持つビジネスの持分を売りたい・買いたいと言ってくる気まぐれな隣人だ。彼は感情的で、時に陶酔状態で高い価格を提示し、時にパニック状態で安い価格を叫ぶ。
@@ -237,7 +237,7 @@ Li Luの教え: このミスター・マーケットはあなたの「召使い�
 実践例: 2008年のリーマンショック、2020年のコロナショックで、多くの投資家がパニック売りした時、Li Luは積極的に買い増していたとされる。市場が最も恐怖に支配されている時こそ、最高の安全余裕が得られる瞬間だからだ。
 
 市場の短期的な動きは「ノイズ」であり、ビジネスの本質的価値とは無関係。この区別ができるかどうかが、投資家としての成否を分ける。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1761233138997-44d9b002a08f?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu',
     sourceFaviconUrl: null,
@@ -249,8 +249,8 @@ Li Luの教え: このミスター・マーケットはあなたの「召使い�
   {
     category: 'philosophy',
     contentType: 'quote',
-    title: 'Circle of Competence — Know Your Boundaries',
-    summary: 'The size of your circle of competence is not as important as knowing its boundaries. Investing outside your circle is where permanent capital loss occurs.',
+    title: '能力の輪——境界を知れ',
+    summary: '輪の大きさより、その境界を知ることが重要。能力の輪の外で投資すると永久的な資本損失が起きる。',
     articleBody: `「能力の輪（Circle of Competence）」は、Li Luの投資判断における最も実践的な原則だ。
 
 自分が本当に理解できるビジネスの範囲——それが能力の輪だ。Li Luの言葉を借りれば、「輪の大きさは重要ではない。重要なのはその境界を知ること」。
@@ -260,7 +260,7 @@ Li Luの教え: このミスター・マーケットはあなたの「召使い�
 Li Luの実践: 彼のポートフォリオ9銘柄は、全て彼が深く理解しているビジネスだ。テック（GOOG）、金融（BAC, BRK-B, EWBC）、中国EC（PDD）、エネルギー（OXY）——いずれも彼のバックグラウンド（中国出身、コロンビア大学BA/JD/MBA、Munger門下）と直接つながる領域。
 
 能力の輪を広げる方法: Li Luは「毎日読む」ことを推奨する。年間レポート、業界レポート、歴史書、科学書——あらゆる知識が能力の輪を少しずつ広げる。ただし、広げている最中のエリアには投資しない。完全に理解してからだ。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1679917489893-517654219a17?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu',
     sourceFaviconUrl: null,
@@ -272,8 +272,8 @@ Li Luの実践: 彼のポートフォリオ9銘柄は、全て彼が深く理解
   {
     category: 'philosophy',
     contentType: 'quote',
-    title: 'Modernization as Compound Interest',
-    summary: 'Li Lu\'s unique civilizational insight: the process of modernization itself is a compounding phenomenon. Countries that enter the path of modernization experience exponential growth in living standards.',
+    title: '近代化は複利である',
+    summary: 'Li Lu独自の洞察——近代化の軌道に乗った国は生活水準が指数関数的に成長する。文明レベルの複利。',
     articleBody: `「近代化は複利である」——これはLi Luの最もオリジナルな知的貢献だ。
 
 従来の投資家は企業レベルで複利を考える。Li Luは文明レベルで複利を考える。一度近代化の軌道に乗った国は、知識・技術・生活水準が指数関数的に成長し、その流れはほぼ止められない。
@@ -283,7 +283,7 @@ Li Luの実践: 彼のポートフォリオ9銘柄は、全て彼が深く理解
 投資への応用: Li Luはこのフレームワークを使って「どの国がまだ近代化の途上にあるか」を分析する。中国の14億人がまだ完全には近代化していないという事実は、巨大な投資機会を意味する。
 
 この視点が与えてくれるもの: 短期的な市場ノイズ（貿易戦争、規制強化、景気後退）を「文明レベルのトレンド」の文脈で評価できるようになる。数十年単位で見れば、これらは些末な出来事に過ぎない。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1767818375880-c7bc35d76e50?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu',
     sourceFaviconUrl: null,
@@ -295,8 +295,8 @@ Li Luの実践: 彼のポートフォリオ9銘柄は、全て彼が深く理解
   {
     category: 'philosophy',
     contentType: 'quote',
-    title: 'Concentration vs Diversification',
-    summary: 'Li Lu runs one of the most concentrated portfolios among major fund managers — just 9 holdings. He believes deep understanding of a few businesses beats shallow knowledge of many.',
+    title: '集中投資 vs 分散投資',
+    summary: '大手ファンドマネージャー中でも異例のたった9銘柄。少数を深く知る方が、多数を浅く知るよりいい。',
     articleBody: `Li Luのポートフォリオはたった9銘柄。運用額$3.57Bの大手ファンドマネージャーとしては異例の集中度だ。
 
 なぜ集中するのか: 「少数のことを深く知る方が、多数のことを浅く知るよりもいい。集中は深い確信の自然な結果だ」とLi Luは言う。
@@ -313,7 +313,7 @@ Li Luの実践: 彼のポートフォリオ9銘柄は、全て彼が深く理解
 リスク管理: 集中投資のリスクは「安全余裕」で管理する。各銘柄を本質的価値より大幅に安い価格で買っていれば、個別のリスクはすでに織り込まれている。
 
 この姿勢はCharlie Mungerの影響が色濃い。Mungerも「良いアイデアは人生で20個もない。見つけたら大きく賭けろ」と説いていた。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1666438803512-3e0f546cbab3?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu',
     sourceFaviconUrl: null,
@@ -327,8 +327,8 @@ Li Luの実践: 彼のポートフォリオ9銘柄は、全て彼が深く理解
   {
     category: 'philosophy',
     contentType: 'speech',
-    title: 'Li Lu\'s Tribute to Charlie Munger',
-    summary: 'Li Lu\'s heartfelt tribute to his mentor Charlie Munger, published after Munger\'s passing in November 2023. Reflects on their decades-long relationship and Munger\'s profound influence on his thinking.',
+    title: 'Li Luのチャーリー・マンガー追悼文',
+    summary: '2023年11月に99歳で亡くなった師への追悼。数十年の関係と、マンガーが自身の思考に与えた深い影響を振り返る。',
     articleBody: `2023年11月、Charlie Mungerが99歳で亡くなった。Li Luは師であり友であった人物への追悼文を発表した。
 
 Li LuとMungerの出会い: 1990年代後半、Li Luはまだ若い投資家だった。Mungerとの出会いが彼の人生を決定的に変えた。Mungerはバリュー投資の真髄を教えただけでなく、「正しいビジネスを正しい価格で買う」というシフトをもたらした。グレアムの「シケモクバリュー（安いだけの株を拾う）」から、「素晴らしいビジネスを適正価格で買う」への進化だ。
@@ -338,7 +338,7 @@ Li LuとMungerの出会い: 1990年代後半、Li Luはまだ若い投資家だ�
 Mungerの教え: Li Luは追悼文で、Mungerから学んだ最も重要なことは「マルチディシプリナリー・アプローチ（学際的思考法）」だと述べている。物理学、生物学、心理学、歴史——あらゆる分野の知識を投資判断に活かす。
 
 Li Luの言葉: 「Charlieは私に投資だけでなく、より良い人間になる方法を教えてくれた。」`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1711615745585-59213ecfec47?w=600&h=400&fit=crop',
     sourceUrl: 'https://moiglobal.com/wp-content/uploads/li-lu-on-charlie-munger-202412.pdf',
     sourceName: 'MOI Global',
     sourceFaviconUrl: null,
@@ -350,8 +350,8 @@ Li Luの言葉: 「Charlieは私に投資だけでなく、より良い人間に
   // === COMPANY DEEP DIVES (from portfolio) ===
   {
     category: 'company_deep_dive',
-    title: 'Why Li Lu\'s Largest Bet is Alphabet (GOOG)',
-    summary: 'Alphabet represents 43.86% of Himalaya Capital\'s portfolio — an extraordinarily concentrated position. The thesis centers on Google\'s dominance in search, cloud computing growth, and AI leadership.',
+    title: 'なぜLi Luの最大の賭けはAlphabet（GOOG）か',
+    summary: 'ポートフォリオの43.86%を占める異例の集中ポジション。検索の支配、クラウドの成長、AIのリーダーシップ。',
     articleBody: `Alphabet（GOOG）はHimalaya Capitalのポートフォリオの43.86%を占める——Li Luの最大の賭けだ。$3.57Bの運用資産のうち約$1.56BがGoogleに集中している。
 
 投資テーゼ:
@@ -365,7 +365,7 @@ Li Luの言葉: 「Charlieは私に投資だけでなく、より良い人間に
 4. YouTube: 世界第2の検索エンジンであり、最大の動画プラットフォーム。広告収入に加え、サブスクリプション（YouTube Premium）収入も成長中。
 
 なぜ43%も集中するのか: Li Luの哲学では、深く理解し確信が持てるビジネスに大きく賭ける。Alphabetは「能力の輪」の中にあり、安全余裕も確保できていると判断したのだろう。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1766287869896-bc222435f6ce?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Portfolio Analysis',
     sourceFaviconUrl: null,
@@ -374,8 +374,8 @@ Li Luの言葉: 「Charlieは私に投資だけでなく、より良い人間に
   },
   {
     category: 'company_deep_dive',
-    title: 'Bank of America: Li Lu\'s Financial Sector Bet',
-    summary: 'BAC at 16.08% of the portfolio reflects Li Lu\'s conviction in America\'s largest consumer bank. The thesis: rising rates benefit net interest margins, and BAC\'s digital transformation is underappreciated.',
+    title: 'バンク・オブ・アメリカ——金融セクターへの賭け',
+    summary: 'ポートフォリオの16.08%。米国最大の消費者銀行への確信。金利上昇の追い風と過小評価されたデジタル変革。',
     articleBody: `Bank of America（BAC）はHimalaya Capitalのポートフォリオの16.08%を占める。Li Luの金融セクターへの確信を示すポジションだ。
 
 投資テーゼ:
@@ -389,7 +389,7 @@ Li Luの言葉: 「Charlieは私に投資だけでなく、より良い人間に
 4. バフェット／マンガーの系譜: Warren BuffettもBACの大株主。Li Luが師匠と同じ銘柄を保有していることは、バリュー投資の知的系譜の一貫性を示す。
 
 Li Luが金融株を好む理由: 銀行は本質的にレバレッジビジネスだが、BACのような「大きすぎて潰せない」銀行は、政府の暗黙の保証という追加の安全余裕がある。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1760243875440-3556238664d6?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Portfolio Analysis',
     sourceFaviconUrl: null,
@@ -398,8 +398,8 @@ Li Luが金融株を好む理由: 銀行は本質的にレバレッジビジネ�
   },
   {
     category: 'company_deep_dive',
-    title: 'PDD Holdings: The China Consumer Play',
-    summary: 'PDD (Temu\'s parent) at 14.64% represents Li Lu\'s bet on Chinese consumer spending. Despite geopolitical risks, PDD\'s execution in e-commerce and international expansion via Temu is remarkable.',
+    title: 'PDD Holdings——中国消費者への賭け',
+    summary: 'Temu親会社、ポートフォリオの14.64%。地政学リスクにもかかわらず、EC市場での実行力とTemuの世界展開が際立つ。',
     articleBody: `PDD Holdings（Temu／Pinduoduoの親会社）はHimalaya Capitalのポートフォリオの14.64%を占める。Li Luの「中国消費者」に対する賭けだ。
 
 投資テーゼ:
@@ -415,7 +415,7 @@ Li Luが金融株を好む理由: 銀行は本質的にレバレッジビジネ�
 リスク: 米国のTemu規制リスク、中国政府のテック規制、為替リスク。しかしLi Luは、14億人の消費市場の成長力がこれらのリスクを長期的に凌駕すると判断したのだろう。
 
 Li Luが中国出身であることも重要——彼は中国の消費者心理とビジネス環境を「能力の輪」の中で深く理解している。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1661963195340-6a733f99a12c?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Portfolio Analysis',
     sourceFaviconUrl: null,
@@ -424,8 +424,8 @@ Li Luが中国出身であることも重要——彼は中国の消費者心理
   },
   {
     category: 'company_deep_dive',
-    title: 'Berkshire Hathaway: The Student Holds the Master\'s Work',
-    summary: 'BRK-B at 12.64% — Li Lu holding Buffett/Munger\'s company is deeply symbolic. It also serves as a cash-equivalent with upside: Berkshire\'s insurance float and diverse operating businesses.',
+    title: 'バークシャー・ハサウェイ——弟子が師匠の会社を持つ',
+    summary: 'ポートフォリオの12.64%。象徴的な意味に加え、現金同等物＋アルファの合理的な投資テーゼ。',
     articleBody: `Berkshire Hathaway（BRK-B）はHimalaya Capitalのポートフォリオの12.64%を占める。弟子が師匠の会社を保有するという象徴的な意味だけでなく、投資テーゼとしても合理的だ。
 
 投資テーゼ:
@@ -439,7 +439,7 @@ Li Luが中国出身であることも重要——彼は中国の消費者心理
 4. 後継計画: Greg Abelが後継CEOとして準備済み。バフェットの投資哲学はバークシャーの文化として組織に埋め込まれており、個人の退任リスクは限定的。
 
 Li Luにとっての意味: Mungerへの敬意の表現であると同時に、バークシャーはLi Luの投資哲学——安全余裕、能力の輪、オーナーの精神——の全てを体現する企業でもある。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1580785693001-bb53b8a17707?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Portfolio Analysis',
     sourceFaviconUrl: null,
@@ -448,8 +448,8 @@ Li Luにとっての意味: Mungerへの敬意の表現であると同時に、�
   },
   {
     category: 'company_deep_dive',
-    title: 'East West Bancorp: The Cross-Pacific Banking Bridge',
-    summary: 'EWBC at 8.74% is Li Lu\'s niche banking play. East West Bank uniquely bridges US and Chinese business communities — a moat born from cultural competence that competitors can\'t replicate.',
+    title: 'イースト・ウエスト・バンコープ——太平洋を繋ぐ銀行',
+    summary: 'ポートフォリオの8.74%。米中ビジネスコミュニティを橋渡しする唯一の銀行。文化的能力が生むモート。',
     articleBody: `East West Bancorp（EWBC）はHimalaya Capitalのポートフォリオの8.74%を占める。Li Luのニッチ銀行への賭けだ。
 
 投資テーゼ:
@@ -463,7 +463,7 @@ Li Luにとっての意味: Mungerへの敬意の表現であると同時に、�
 4. Li Luの能力の輪: Li Lu自身が中国系アメリカ人として、EWBCの顧客層と市場を肌感覚で理解している。これは他の投資家にはない情報優位性だ。
 
 リスク: 米中関係の悪化による太平洋間ビジネスの減少、中国経済の減速。しかし、これらのリスクは株価に既に織り込まれていると判断したのだろう。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1495511167051-13bb07bde85b?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Portfolio Analysis',
     sourceFaviconUrl: null,
@@ -475,8 +475,8 @@ Li Luにとっての意味: Mungerへの敬意の表現であると同時に、�
   {
     category: 'philosophy',
     contentType: 'book_recommendation',
-    title: 'Li Lu\'s Recommended Reading: Poor Charlie\'s Almanack',
-    summary: 'Charlie Munger\'s collected wisdom on investing, psychology, and decision-making. Li Lu considers Munger his most important mentor and this book essential reading for any serious investor.',
+    title: 'Li Lu推薦図書: プアチャーリーの年鑑',
+    summary: 'マンガーの投資・心理学・意思決定に関する知恵の集大成。Li Luが「全投資家必読」と推す一冊。',
     articleBody: `『Poor Charlie's Almanack（プアチャーリーの年鑑）』は、Charlie Mungerの講演、エッセイ、知恵を集めた書籍だ。Li Luは「全ての投資家が読むべき一冊」として強く推薦している。
 
 本の核心メッセージ:
@@ -488,7 +488,7 @@ Li Luにとっての意味: Mungerへの敬意の表現であると同時に、�
 3. 人間心理の理解: Mungerは25の心理的傾向（誤判断の心理学）を体系化。確証バイアス、損失回避、社会的証明——これらを理解することが投資の成否を分ける。
 
 Li Luへの影響: MungerのマルチディシプリナリーアプローチはLi Luの文明論フレームワークに直接つながっている。歴史、経済学、物理学を横断して投資機会を分析する手法は、この本が原点だ。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1761319114727-372806b1c56a?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu Book List',
     sourceFaviconUrl: null,
@@ -499,8 +499,8 @@ Li Luへの影響: MungerのマルチディシプリナリーアプローチはL
   {
     category: 'philosophy',
     contentType: 'book_recommendation',
-    title: 'Li Lu\'s Recommended Reading: The Intelligent Investor',
-    summary: 'Benjamin Graham\'s classic on value investing. Li Lu studied under Graham\'s intellectual lineage at Columbia Business School. The concepts of Mr. Market and margin of safety originate here.',
+    title: 'Li Lu推薦図書: 賢明なる投資家',
+    summary: 'グレアムの古典。ミスター・マーケットと安全余裕の概念はこの本が原点。Li Luはコロンビア大でこの系譜を直接学んだ。',
     articleBody: `『The Intelligent Investor（賢明なる投資家）』はBenjamin Grahamの1949年の名著で、バリュー投資のバイブルだ。Warren Buffettは「投資に関して書かれた最高の本」と評している。
 
 本の核心メッセージ:
@@ -514,7 +514,7 @@ Li Luへの影響: MungerのマルチディシプリナリーアプローチはL
 Li Luとの繋がり: Li Luはコロンビア・ビジネススクールでGrahamの知的系譜を直接学んだ。Graham→Buffett→Munger→Li Luという師弟関係の系譜があり、この本はその起源にある。
 
 現代の投資家にとっての価値: 出版から75年以上経っても原則は全く色褪せない。むしろ、アルゴリズムトレーディングやSNS時代において、「感情に流されない」「安全余裕を確保する」といった教えの重要性は増している。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1747893062403-f7db0e9f0fe4?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu Book List',
     sourceFaviconUrl: null,
@@ -525,8 +525,8 @@ Li Luとの繋がり: Li Luはコロンビア・ビジネススクールでGraha
   {
     category: 'philosophy',
     contentType: 'book_recommendation',
-    title: 'Li Lu\'s Recommended Reading: Guns, Germs, and Steel',
-    summary: 'Jared Diamond\'s exploration of why some civilizations advanced faster than others. This book deeply influenced Li Lu\'s civilizational framework for understanding modernization and compound growth.',
+    title: 'Li Lu推薦図書: 銃・病原菌・鉄',
+    summary: 'なぜ特定の文明が他より速く発展したか。Li Luの「近代化は複利」フレームワークの知的基盤となった本。',
     articleBody: `『Guns, Germs, and Steel（銃・病原菌・鉄）』はJared Diamondの1997年の著作で、なぜ特定の文明が他より速く発展したかを地理・生態学的に分析した本だ。
 
 本の核心メッセージ: 文明の発展速度の差は、人種や文化の優劣ではなく、地理的条件（農耕に適した野生植物・家畜化可能な動物の分布、大陸の東西軸と南北軸の違いなど）によって説明できる。
@@ -536,7 +536,7 @@ Li Luへの影響: この本はLi Luの「近代化は複利」フレームワ�
 投資への応用: Li Luは地理・文化・制度の条件を分析することで、どの国が近代化の恩恵を最も受けるかを予測する。中国への投資（PDD Holdings）も、14億人が近代化の軌道に乗っているという文明レベルの分析に基づいている。
 
 この本が教えてくれること: 投資判断を個別企業の財務分析だけに頼るのは視野が狭い。文明・歴史・地理の大きな流れを理解することで、より深い投資洞察が得られる。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1563126365-9e06b5aabc21?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Li Lu Book List',
     sourceFaviconUrl: null,
@@ -548,8 +548,8 @@ Li Luへの影響: この本はLi Luの「近代化は複利」フレームワ�
   // === HISTORICAL CONTEXT ===
   {
     category: 'market_context',
-    title: 'Li Lu\'s BYD Introduction Changed Berkshire\'s History',
-    summary: 'In 2008, Li Lu introduced BYD to Charlie Munger, leading to Berkshire\'s $232M investment. That stake grew to over $7 billion — one of Berkshire\'s best investments ever.',
+    title: 'Li LuのBYD紹介がバークシャーの歴史を変えた',
+    summary: '2008年、Li LuがマンガーにBYDを紹介。$232Mの投資は$7B以上に成長し、バークシャー史上最高の投資の一つに。',
     articleBody: `2008年、Li LuはCharlie MungerにBYD（比亜迪）を紹介した。この一つの行動が、バークシャー・ハサウェイの歴史を変えた。
 
 経緯: Li Luは中国でのリサーチ中にBYDを発見。当時BYDはバッテリーメーカーから自動車メーカーへの転換期にあり、電気自動車（EV）の開発に注力していた。Li LuはBYDの創業者・王伝福（Wang Chuanfu）の能力と、EVの将来性に確信を持ちMungerに紹介。
@@ -563,7 +563,7 @@ MungerからBuffettへ: MungerはBYDに感銘を受け、Buffettに投資を強�
 - 「良い投資アイデアは人生で数個しかない」——BYDはその一つだった
 - メンター（Munger）との信頼関係が機会を最大化した
 - バリュー投資は「安い株を買う」だけではなく、「未来の巨大企業を見抜く目」も含む`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1651688730796-151972ba8f87?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Investment History',
     sourceFaviconUrl: null,
@@ -572,8 +572,8 @@ MungerからBuffettへ: MungerはBYDに感銘を受け、Buffettに投資を強�
   },
   {
     category: 'market_context',
-    title: 'Himalaya Capital: From $88M Munger Seed to $3.57B',
-    summary: 'Charlie Munger entrusted Li Lu with $88 million — the only outside manager Munger ever used. Under Li Lu\'s stewardship, Himalaya Capital has grown to manage $3.57 billion.',
+    title: 'ヒマラヤ・キャピタル——マンガーの$88Mから$3.57Bへ',
+    summary: 'マンガーが生涯で唯一使った外部マネージャーにLi Luを選び$88Mを託した。運用資産は$3.57Bに成長。',
     articleBody: `Himalaya Capital Managementの物語は、メンターと弟子の信頼から始まった。
 
 設立: Li Luは1997年にシアトルでHimalaya Capitalを設立。当初は小規模なファンドだった。
@@ -589,7 +589,7 @@ Mungerの信頼: Charlie Mungerは自身の個人資産から$88M（約100億円
 - メディア露出を極力避ける（インタビューは稀）
 
 Li Luの報酬体系: 一般的なヘッジファンドの「2%管理報酬 + 20%成功報酬」ではなく、より投資家に有利な条件だと言われている。これは「オーナーの精神」の実践——ファンドマネージャー自身も投資家と利害を一致させる。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1629976791862-5749e12b2f40?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Fund History',
     sourceFaviconUrl: null,
@@ -598,8 +598,8 @@ Li Luの報酬体系: 一般的なヘッジファンドの「2%管理報酬 + 20
   },
   {
     category: 'market_context',
-    title: 'Li Lu\'s Columbia Triple Degree: BA + JD + MBA',
-    summary: 'After arriving in the US as a Tiananmen refugee, Li Lu simultaneously earned three degrees from Columbia University — a bachelor\'s, a law degree, and an MBA. This intellectual foundation shapes his analytical rigor.',
+    title: 'Li Luのコロンビア大3学位同時取得',
+    summary: '天安門の難民としてアメリカに到着後、学士・法学・MBAを同時に取得。この学際的教育が分析力の源泉。',
     articleBody: `天安門事件後にアメリカに亡命したLi Luは、コロンビア大学で前例のない学業を成し遂げた——学士号（BA）、法学博士号（JD）、経営学修士号（MBA）の3学位を同時に取得したのだ。
 
 背景: 中国から文字通り着の身着のまま渡米したLi Luは、英語もろくに話せない状態からスタート。奨学金を得てコロンビア大学に入学し、驚異的な知的貪欲さで3つの大学院プログラムを並行して修了した。
@@ -613,7 +613,7 @@ JD（法学）: 契約・規制・コーポレートガバナンスの理解。�
 MBA（経営学）: 財務分析、競争戦略、企業価値評価の体系的知識。Benjamin Grahamの知的系譜をコロンビアBSで直接学んだ。
 
 この知的基盤の重要性: Li Luの投資分析の深さ——企業のビジネスモデル、競争優位性、規制環境、文明的コンテキストを統合的に評価する能力——は、この異例の学際的教育に根ざしている。`,
-    imageUrl: null,
+    imageUrl: 'https://images.unsplash.com/photo-1592021521142-4e2953907de8?w=600&h=400&fit=crop',
     sourceUrl: null,
     sourceName: 'Biography',
     sourceFaviconUrl: null,
