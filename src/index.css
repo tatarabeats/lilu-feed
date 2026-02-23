@@ -5,8 +5,8 @@
   --color-page-bg: oklch(0.14 0.025 260);
   --color-card-bg: oklch(0.18 0.03 258);
   --color-card-bg-hover: oklch(0.22 0.03 258);
-  --color-text-primary: oklch(0.63 0.14 40);
-  --color-text-secondary: oklch(0.50 0.08 42);
+  --color-text-primary: oklch(0.5 0.13 38);
+  --color-text-secondary: oklch(0.4 0.07 40);
   --color-text-muted: oklch(0.52 0.02 260);
   --color-accent: oklch(0.72 0.09 75);
   --color-accent-dark: oklch(0.65 0.08 75);
