@@ -1,6 +1,6 @@
-import { useFeedContext } from '../../store/feedContext';
-import { PORTFOLIO } from '../../data/portfolio';
-import { HoldingPill } from './HoldingPill';
+import { useFeedContext } from "../../store/feedContext";
+import { PORTFOLIO } from "../../data/portfolio";
+import { HoldingPill } from "./HoldingPill";
 
 export function PortfolioBanner() {
   const { marketData } = useFeedContext();
@@ -13,6 +13,7 @@ export function PortfolioBanner() {
           symbol={holding.symbol}
           quote={marketData?.holdings[holding.symbol] ?? null}
           weight={holding.weight}
+          avgCostBasis={holding.avgCostBasis}
         />
       ))}
     </div>
