@@ -48,7 +48,7 @@ export function MarketWidget() {
           className={`text-sm font-medium ${isUp ? "text-gain" : "text-loss"}`}
         >
           {isUp ? "+" : ""}
-          {portfolioReturn.toFixed(0)}% from cost basis
+          {portfolioReturn.toFixed(0)}% from est. cost basis
         </div>
       ) : (
         <div className="text-xs text-text-muted">Market data unavailable</div>

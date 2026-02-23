@@ -1,4 +1,73 @@
-import type { FeedItem } from "../types/feed";
+import type { FeedItem, FeedCategory } from "../types/feed";
+
+// Keyword-based auto-categorizer for news articles
+function categorizeNewsItem(title: string, description: string): FeedCategory {
+  const text = (title + " " + (description || "")).toLowerCase();
+  const titleL = title.toLowerCase();
+
+  // Portfolio company analysis (title primarily about one of Li Lu's holdings)
+  const portfolioCompanies = [
+    ["alphabet", "google", " goog "],
+    ["bank of america", " bac "],
+    ["pinduoduo", " pdd ", "temu"],
+    ["berkshire hathaway", " brk"],
+    ["east west bancorp", "east west bank", " ewbc"],
+    ["occidental petroleum", " oxy "],
+    ["crocs", " crox"],
+    ["apple inc", " aapl "],
+  ];
+  if (
+    portfolioCompanies.some((variants) =>
+      variants.some((v) => titleL.includes(v)),
+    )
+  ) {
+    return "company_deep_dive";
+  }
+
+  // Investment philosophy
+  const philosophyWords = [
+    "value invest",
+    "investment philosophy",
+    "charlie munger",
+    "warren buffett",
+    "long-term invest",
+    "quality compan",
+    "economic moat",
+    "intrinsic value",
+    "margin of safety",
+    "deep value",
+    "patient capital",
+    "compounding",
+    "capital allocation",
+    "owner operator",
+  ];
+  if (philosophyWords.some((w) => text.includes(w))) return "philosophy";
+
+  // Market context / macro
+  const marketWords = [
+    "federal reserve",
+    " fed rate",
+    "interest rate",
+    "rate cut",
+    "rate hike",
+    "inflation",
+    " recession",
+    " gdp ",
+    "trade war",
+    "tariff",
+    "s&p 500",
+    "stock market crash",
+    "market rally",
+    "bear market",
+    "bull market",
+    "china economy",
+    "chinese economy",
+    "monetary policy",
+  ];
+  if (marketWords.some((w) => text.includes(w))) return "market_context";
+
+  return "lilu_news";
+}
 
 interface RawNewsItem {
   title: string;
@@ -95,7 +164,7 @@ export async function fetchNews(): Promise<FeedItem[]> {
 
       return {
         id: stableId(raw.link, raw.pubDate),
-        category: "lilu_news" as const,
+        category: categorizeNewsItem(raw.title, raw.description),
         title: raw.title,
         summary: raw.title,
         imageUrl: ogImageCache.get(raw.link) ?? null,

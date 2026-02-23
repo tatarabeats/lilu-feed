@@ -56,7 +56,7 @@ export function HoldingsGrid() {
                       {holding.firstFilingYear}〜
                     </span>
                     <span className="text-[11px] text-text-muted">
-                      avg ${holding.avgCostBasis.toFixed(0)}
+                      est. ~${holding.avgCostBasis.toFixed(0)}
                     </span>
                   </div>
                   <div className="flex items-baseline gap-2">
